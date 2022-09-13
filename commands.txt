@@ -1,0 +1,26 @@
+Create Kafka Cluster
+# cd docker-compose
+# docker-compose -f common.yml -f kafka_cluster.yml up
+
+
+List Kafta Cluster Status and Topics
+
+# docker run -it --network=host --rm --name=kcat confluentinc/cp-kafkacat kafkacat -L -b localhost:19092
+
+List Kafka messages on specific topic
+
+# docker run -it --network=host --rm --name=kcat confluentinc/cp-kafkacat kafkacat -C -b localhost:19092 -t twitter-topic
+
+
+
+#Create all application on single docker image
+
+# cd twitter-to-kafka-service
+
+# mvn clean install -DskipTests
+
+docker-compose -f .\common.yml -f .\kafka_cluster.yml -f .\services.yml up
+
+or
+
+docker-compose up
