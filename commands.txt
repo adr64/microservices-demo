@@ -24,3 +24,10 @@ docker-compose -f .\common.yml -f .\kafka_cluster.yml -f .\services.yml up
 or
 
 docker-compose up
+
+
+GitHub Token:
+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
+
+http://localhost:8888/config-client/twitter_to_kafka
+
