@@ -31,3 +31,18 @@ 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
 
 http://localhost:8888/config-client/twitter_to_kafka
 
+Git Commands for security features
+
+git add . 
+git commit -am "Added config server basic auth"
+git checkout -b jasypt-enc
+git checkout master
+git push ***
+git checkout -b jce-enc
+
+change branch
+git checkout jasypt-enc
+
+
+$env:JASYPT_ENCRYPTOR_PASSWORD
+-Djasypt.encryptor.password='Demo_Pwd!2020'
