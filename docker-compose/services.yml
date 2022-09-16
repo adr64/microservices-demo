@@ -16,4 +16,13 @@ services:
       - "TWITTER-TO-KAFKA-SERVICE_ENABLE-MOCK-TWEETS=true"
       - "TWITTER-TO-KAFKA-SERVICE_ENABLE-V2-TWEETS=false"
     networks:
-      - ${GLOBAL_NETWORK:-services}
+  config-server:
+    image: ${GROUP_ID}/config.server:${SERVICE_VERSION:-latest}
+    ports:
+      - "5007:5007"
+    volumes:
+      - "./docker-logs:/workspace/config-server/logs"
+    environment:
+      - "JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -Xms128m -Xmx256m"
+    networks:
+      - ${GLOBAL_NETWORK:-services}  - ${GLOBAL_NETWORK:-services}

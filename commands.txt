@@ -31,3 +31,11 @@ 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
 
 http://localhost:8888/config-client/twitter_to_kafka
 
+SDK
+
+Git Bash # curl -s "https://get.sdkman.io" | bash
+https://ranxing.wordpress.com/2016/12/13/add-zip-into-git-bash-on-windows/
+
+spring encrypt springCloudPwd! --key 'Demo_Pwd!2020'
+
+spring decrypt fbaeffaf3b52c6ca9073a76e3e7da03b23f536fee3a59973b1d20b90b6dcc5fc --key 'Demo_Pwd!2020'
