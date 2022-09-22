@@ -11,6 +11,8 @@ List Kafka messages on specific topic
 
 # docker run -it --network=host --rm --name=kcat confluentinc/cp-kafkacat kafkacat -C -b localhost:19092 -t twitter-topic
 
+# docker run -it --network=host --rm --name=kcat confluentinc/cp-kafkacat kafkacat -L -b localhost:19092
+
 
 
 #Create all application on single docker image
@@ -39,3 +41,16 @@ https://ranxing.wordpress.com/2016/12/13/add-zip-into-git-bash-on-windows/
 spring encrypt springCloudPwd! --key 'Demo_Pwd!2020'
 
 spring decrypt fbaeffaf3b52c6ca9073a76e3e7da03b23f536fee3a59973b1d20b90b6dcc5fc --key 'Demo_Pwd!2020'
+
+Port USAGE:
+Get-Process -Id (Get-NetTCPConnection -LocalPort 8888).OwningProcess
+
+--------
+
+Elastic Error:
+    open powershell
+    wsl -d docker-desktop
+    sysctl -w vm.max_map_count=262144
+	
+	Increase Dokcker Memory RAM
+	

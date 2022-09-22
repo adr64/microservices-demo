@@ -90,6 +90,7 @@ public class KafkaAdminClient {
     }
 
     private HttpStatus getSchemaRegistryStatus() {
+        LOG.info("SCHEMA URI: {}", kafkaConfigData.getSchemaRegistryUrl());
         try {
             return webClient
                     .method(HttpMethod.GET)
